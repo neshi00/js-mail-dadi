@@ -36,30 +36,27 @@ else {
 // Generare un numero random da 1 a 6, sia per il giocatore sia per il computer.
 // Stabilire il vincitore, in base a chi fa il punteggio più alto.
 
-// definisco lista array -> numeri estratti
-const numberList = ['humanNumber', 'skynetNumber'];
-
 // genero numero random da 1 a 6 per il giocatore 
 // genero numero random da 1 a 6 per la macchina
-let humanNumber = Math.floor(Math.random() * 7);
+let humanNumber = Math.floor(Math.random() * 6) +1;
 console.log('il numero generato per l\'umanità è ' + humanNumber);
 
-let skynetNumber = Math.floor(Math.random() * 7);
+let skynetNumber = Math.floor(Math.random() * 6) +1;
 console.log('il numero generato per Skynet è ' + skynetNumber);
 
 
 // apro un ciclo for in cui se il numero generato per l'umanità è > rispetto
-// a quello generato per la Skynet decreto la sua vittoria, e viceversa
-// se i due numeri estratti sono uguali ripeto estrazione (da priorizzare)
-for (let i = 0; i < numberList.length; i++) {
+// a quello generato per Skynet decreto la sua vittoria, e viceversa
+if (humanNumber === skynetNumber) {
+    Math.floor(Math.random() * 6) +1;
+    Math.floor(Math.random() * 6) +1;  
     if (humanNumber === skynetNumber) {
-        
-        
+        alert('peace and love')    
     }
-    if (humanNumber > skynetNumber) {
-        alert('l\'umanità è salva');       
-    }
-    else {
-        alert('si salvi chi può');
-    }
+}  
+else if (humanNumber > skynetNumber) {
+    alert('l\'umanità è salva');       
+}
+else {
+    alert('si salvi chi può');
 }
