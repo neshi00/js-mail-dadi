@@ -21,7 +21,7 @@ for (let i = 0; i < listMail.length; i++) {
     }
 }
 
-// verificato se l'utente ha inserito una mail accettata o meno, comunico relatico messaggio
+// verificato se l'utente ha inserito una mail accettata o meno, comunico relativo messaggio
 if (valid) {
     alert('puoi accedere');
 }
@@ -30,3 +30,36 @@ else {
 }
 
 //-----------------------------------------------------------------------
+
+
+// Gioco dei dadi
+// Generare un numero random da 1 a 6, sia per il giocatore sia per il computer.
+// Stabilire il vincitore, in base a chi fa il punteggio più alto.
+
+// definisco lista array -> numeri estratti
+const numberList = ['humanNumber', 'skynetNumber'];
+
+// genero numero random da 1 a 6 per il giocatore 
+// genero numero random da 1 a 6 per la macchina
+let humanNumber = Math.floor(Math.random() * 7);
+console.log('il numero generato per l\'umanità è ' + humanNumber);
+
+let skynetNumber = Math.floor(Math.random() * 7);
+console.log('il numero generato per Skynet è ' + skynetNumber);
+
+
+// apro un ciclo for in cui se il numero generato per l'umanità è > rispetto
+// a quello generato per la Skynet decreto la sua vittoria, e viceversa
+// se i due numeri estratti sono uguali ripeto estrazione (da priorizzare)
+for (let i = 0; i < numberList.length; i++) {
+    if (humanNumber === skynetNumber) {
+        
+        
+    }
+    if (humanNumber > skynetNumber) {
+        alert('l\'umanità è salva');       
+    }
+    else {
+        alert('si salvi chi può');
+    }
+}
